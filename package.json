@@ -1,0 +1,31 @@
+{
+  "name": "projeto-pessoal-cartao-interativo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/styles:build/styles --style=compressed",
+    "watch-sass": "sass src/styles:build/styles --watch --style=compressed",
+
+    "copy-img": "cpy \"src/img/**/*\" build/img",
+    "watch-img": "chokidar \"src/img/**/*\" -c \"npm run copy-img\"",
+
+    "terser": "terser src/scripts/main.js -o build/scripts/main.min.js -c -m",
+    "watch-js": "chokidar \"src/scripts/**/*.js\" -c \"npm run terser\"",
+
+    "dev": "concurrently \"npm run watch-sass\" \"npm run watch-img\" \"npm run watch-js\"",
+    "build": "npm run sass && npm run copy-img && npm run terser",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "cpy-cli": "^6.0.0",
+    "sass": "^1.92.0",
+    "terser": "^5.44.0"
+  }
+}

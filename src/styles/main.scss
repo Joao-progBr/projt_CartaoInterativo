@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.background-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../../build/img/bg-main-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    position: relative;
+}
+
+.card{
+    z-index: 20;
+    // background-color: red;
+    // width: 300px;
+    // height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+
+/////// card front start ///////
+    &__front{
+        background-image: url('../../build/img/bg-card-front.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 280px;
+        width: 500px;
+        margin-bottom: 2em;
+        position: relative;
+        
+    }
+
+    &__frontContent{
+        position: absolute;
+        padding: 2em;
+
+        img{
+            display: block;
+            margin-bottom: 5em;
+        }
+    }
+
+    &__number{
+        font-size: 3em;
+        width: 100%;
+    }
+
+    &__info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: .5em;
+        font-size: 1.5em;
+    }
+
+/////// card front end ///////
+    
+
+
+
+/////// card back start ///////
+    &__back{
+        background-image: url('../../build/img/bg-card-back.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 280px;
+        width: 500px;
+        margin-left: 5em;
+    }
+
+
+
+
+/////// card front back /////// 
+}
+
+
+
