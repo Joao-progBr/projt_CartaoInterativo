@@ -1,0 +1,21 @@
+$colorWhite: hsl(0, 100%, 100%);
+$colorDarkGray: hsl(212, 12%, 71%);
+$colorLightGray: hsl(270, 3%, 87%);
+$colorPurple:hsl(278, 68%, 11%);
+
+/// font family
+
+// .space-grotesk-<uniquifier> {
+//   font-family: "Space Grotesk", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
+
+@mixin fontFamily($size: normal, $weight: normal, $color: $colorWhite){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: "Space Grotesk", sans-serif;
+    color: $color;
+}
+

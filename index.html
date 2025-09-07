@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./build/styles/main.css">
     <title>Frontend Mentor | Interactive card details form</title>
 </head>
@@ -17,11 +20,13 @@
             <div>
                 <div class="card__front">
                     <div class="card__frontContent">
-                        <img src="./build/img/card-logo.svg" alt="">
+                        <div class="card__img">
+                            <img src="./build/img/card-logo.svg" alt="">
+                        </div>
                         <span class="card__number">0000 0000 0000 0000</span>
                         <div class="card__info">
-                            <span>name</span>
-                            <span>date</span>
+                            <span>Jane Appleseed</span>
+                            <span>00/00</span>
                         </div>
                     </div>
                 </div>
@@ -31,9 +36,26 @@
                     </div>
                 </div>
             </div>
-            <form action="#" class="card__form">
-                ola mundo
-            </form>
+            <div>
+                <form action="#" class="card__form" id="form">
+                    <label for="name">Cardholder Name</label>
+                    <input type="text" id="name" placeholder="e.g. Jane Appleseed">
+
+                    <label for="number">Card Number</label>
+                    <input type="number" id="number" placeholder="e.g. 1234 5678 9123 0000">
+
+                    <div>
+                        <label for="date">Exp. Date (MM/YY)</label>
+                        <input type="number" id="date" placeholder="MM">
+                        <input type="number" id="date" placeholder="YY">
+
+                        <label for="cvc">CVC</label>
+                        <input type="number" id="cvc" placeholder="e.g. 123">
+
+                        <button type="submit">Confirm</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 
@@ -42,41 +64,16 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="./build/scripts/main.min.js"></script>
 
-    <!-- 0000 0000 0000 0000
-    Jane Appleseed
-    00/00
+    <!-- 
 
-    000
-
-    Cardholder Name
-    e.g. Jane Appleseed
-
-    Card Number
-    e.g. 1234 5678 9123 0000
-
-    Exp. Date (MM/YY)
-    MM
-    YY
-
-    CVC
-    e.g. 123
-
-    Confirm
+    estilizar formulario
+    responsivo
+    js
+    
+    
+   
 
     Completed state start
 
