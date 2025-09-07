@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;     /* Firefox */
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;       /* Chrome, Safari */
+  margin: 0;
+}
+
 html{
     @include vars.fontFamily();
 }
@@ -17,7 +26,7 @@ html{
     background-image: url('../../build/img/bg-main-desktop.png');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 40vw;
+    width: 35vw;
     height: 100vh;
 }
 
@@ -120,12 +129,68 @@ html{
     &__form{
         display: flex;
         flex-direction: column;
-        gap: 1em;
-        @include vars.fontFamily(normal, normal, vars.$colorPurple);
-        width: 400px;
+        // gap: 1.5em;
+        @include vars.fontFamily(13px, 700, vars.$colorDarkPurple);
+        width: 550px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 5em;
+
+        input{
+            padding: 1em;
+            border-radius: 6px;
+            border: 1px solid vars.$colorLightGray;
+            outline: none;
+            margin: .5em 0 2em;
+            @include vars.fontFamily(16px, 500, vars.$colorDarkPurple);
+            cursor: pointer;
+
+            &:focus{
+                border: 1px solid transparent;
+                background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+            }
+        }
+
+       
     }
 
+    &__formInfo{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
 
+    }
+
+    &__formDate{
+       
+        input{
+            max-width: 100px;
+            width: 100%;
+            display: inline-block;
+        }
+    }
+
+    &__formCvc{
+        margin-left: .5em;
+
+        input{
+            width: 180px;
+        }
+    }
+
+    &__button{
+        padding: 1em;
+        background-color: vars.$colorDarkPurple;
+        @include vars.fontFamily(16px, 700, vars.$colorWhite);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform ease .3s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 }
 
 

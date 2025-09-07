@@ -44,16 +44,20 @@
                     <label for="number">Card Number</label>
                     <input type="number" id="number" placeholder="e.g. 1234 5678 9123 0000">
 
-                    <div>
-                        <label for="date">Exp. Date (MM/YY)</label>
-                        <input type="number" id="date" placeholder="MM">
-                        <input type="number" id="date" placeholder="YY">
+                    <div class="card__formInfo">
+                        <div class="card__formDate">
+                            <label for="date">Exp. Date (MM/YY)</label><br>
+                            <input type="number" id="date" placeholder="MM">
+                            <input type="number" id="date" placeholder="YY">
+                        </div>
 
-                        <label for="cvc">CVC</label>
-                        <input type="number" id="cvc" placeholder="e.g. 123">
+                        <div class="card__formCvc">
+                            <label for="cvc">CVC</label> <br>
+                            <input type="number" id="cvc" placeholder="e.g. 123">
+                        </div>
 
-                        <button type="submit">Confirm</button>
                     </div>
+                    <button class="card__button" type="submit">Confirm</button>
                 </form>
             </div>
         </div>
@@ -68,9 +72,9 @@
 
     <!-- 
 
-    estilizar formulario
-    responsivo
+    criar estilo para a validação no js
     js
+    responsivo
     
     
    
