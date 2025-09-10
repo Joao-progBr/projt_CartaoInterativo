@@ -44,17 +44,20 @@
 
                         <label for="number">Card Number</label>
                         <input type="number" id="number" placeholder="e.g. 1234 5678 9123 0000">
+                        <span id="error-number" style="display:none;">Wrong format, numbers only</span>
 
                         <div class="card__formInfo">
                             <div>
                                 <label for="date">Exp. Date (MM/YY)</label><br>
-                                <input type="number" class="card__formDate" id="date" placeholder="MM">
-                                <input type="number" class="card__formDate" id="date" placeholder="YY">
+                                <input type="number" class="card__formDate" id="month" placeholder="MM">
+                                <input type="number" class="card__formDate" id="month" placeholder="YY">
+                                <span id="error-date" style="display:none;">Can`t be blank</span>
                             </div>
 
                             <div class="card__formCvc">
                                 <label for="cvc">CVC</label> <br>
                                 <input type="number" id="cvc" placeholder="e.g. 123">
+                                <span id="error-cvc" style="display:none;">Cant`t be blank</span>
                             </div>
 
                         </div>
