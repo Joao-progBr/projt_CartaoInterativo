@@ -35,10 +35,11 @@ html{
     margin: 0 auto;
     width: 100%;
     min-height: 100vh;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    // position: relative;
 }
 
 .card{
@@ -46,13 +47,14 @@ html{
     // background-color: red;
     // width: 300px;
     // height: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 2em;  
     width: 100%;
 
 
@@ -108,7 +110,7 @@ html{
         background-size: contain;
         background-repeat: no-repeat;
         height: 280px;
-        width: 500px;
+        width: 100%;
         margin-left: 5em;
         position: relative;
     }
@@ -131,10 +133,9 @@ html{
         flex-direction: column;
         // gap: 1.5em;
         @include vars.fontFamily(13px, 700, vars.$colorDarkPurple);
-        width: 550px;
+        max-width: 400px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        padding: 5em;
 
         input{
             padding: 1em;
@@ -151,8 +152,6 @@ html{
                 linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
             }
         }
-
-       
     }
 
     &__formInfo{
@@ -163,12 +162,8 @@ html{
     }
 
     &__formDate{
-       
-        input{
-            max-width: 100px;
-            width: 100%;
-            display: inline-block;
-        }
+        max-width: 100px;
+        display: inline-block;
     }
 
     &__formCvc{
@@ -191,7 +186,114 @@ html{
             transform: scale(1.1);
         }
     }
+    /////// form end /////// 
 }
+
+
+
+/////// responsive start /////// 
+@media (max-width: 1000px){
+
+
+    .background-left{
+        width: 100%;
+        height: 290px;
+    }
+
+    main .container {
+        width: 90%;
+       
+    }
+
+    .card{
+        flex-direction: column;
+        margin: -3em auto;
+        gap: 0;
+
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+        }
+        
+        &__front{
+            height: 280px;
+            width: 320px;
+            order: 1;
+        }
+
+        &__frontContent{
+            width: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1.5em;
+        }
+        
+        &__img{
+            display: block;
+            margin-bottom: 2em;
+            img{
+                width: 20%;
+            }
+        }
+
+        &__number{
+            letter-spacing: 4px;
+            @include vars.fontFamily(1em, 500)
+        }
+
+
+        /////// card front end ///////
+    
+
+
+
+        /////// card back start ///////
+
+        &__back{
+            height: 280px;
+            width: 300px;
+            margin: 5em 0 -10em 3em;
+            order: 0;
+        }
+
+        &__backContent{
+            position: absolute;
+            padding: 3em;
+            right: 0;
+            top: 8%;
+        }
+        
+        &__formContainer{
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 3em;
+
+            input{
+                width: 100%;
+            }
+        }
+
+        &__formDate{
+            max-width: 40%;
+            display: inline-block;
+        }
+
+        &__formCvc{
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+}
+/////// responsive end /////// 
+
+
+
+
 
 
 
