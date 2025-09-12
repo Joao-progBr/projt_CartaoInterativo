@@ -156,10 +156,13 @@ html{
             margin-bottom: 2em;
         }
         span{
-            
             @include vars.fontFamily(.9em, normal, vars.$colorRed);
             display:block;
             
+        }
+
+        #number,#month, #year, #cvc{
+            margin-bottom: 0;
         }
     }
 
@@ -191,7 +194,6 @@ html{
         border-radius: 6px;
         cursor: pointer;
         transition: transform ease .3s;
-        margin-top: 4em;
 
         &:hover{
             transform: scale(1.1);
