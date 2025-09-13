@@ -55,10 +55,14 @@ document.addEventListener('DOMContentLoaded', function(){
         errorCvcCard.style.display = "none"
     });
 
+
+
     function showSuccessMessage() {
         msgSuccess.style.display = 'block'
         form.style.display = 'none'      
     }
+
+
 
    function showForm() {
         msgSuccess.style.display = 'none'
@@ -135,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-    // 
+    // habilita e desabilita botao
     function checkedForm(){
         const isValidNumber = cardNumber(inputNumberCard.value)
         const isValidName = cardName(inputCardName.value)
