@@ -52,15 +52,16 @@
 
                         <div class="card__formInfo">
                             <div>
-                                <label for="date">Exp. Date (MM/YY)</label><br>
+                                <label for="date">Exp. Date (MM/YY)</label>
                                 <input type="text" class="card__formDate" id="month" placeholder="MM" maxlength="2">
                                 <input type="text" class="card__formDate" id="year" placeholder="YY" maxlength="2">
                                 <span id="error-date" style="display:none;">Can`t be blank</span>
                             </div>
 
                             <div class="card__formCvc">
-                                <label for="cvc">CVC</label> <br>
-                                <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3">
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" class="card__formCvcInput" placeholder="e.g. 123"
+                                    maxlength="3">
                                 <span id="error-cvc" style="display:none;">Cant`t be blank</span>
                             </div>
 
@@ -68,11 +69,11 @@
                         <button class="card__button" type="submit" id="btn">Confirm</button>
                     </form>
 
-                    <div class="card__success" style="display: none;">
+                    <div class="card__success" id="card__success" style="display: none;">
                         <img src="./build/img/icon-complete.svg" alt="">
                         <h1>Thank you!</h1>
                         <p>We've added your card details</p>
-                        <button type="button">Continue</button>
+                        <button type="button" id="btn__continue">Continue</button>
                     </div>
 
                 </div>
